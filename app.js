@@ -9,16 +9,12 @@ let items = [];
 let workItems = [];
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
-//tell our app which is generated using express to use EJS as view engine
 app.set('view engine', 'ejs');
 
 
- //create get route that just sends the browser the word hello when a user tries to access the home route
-//when we render our homepage, first load this route app.get, passing kindofday, newlistitem
 app.get("/", function(req, res){
 
   let today = new Date();
-  // var currentDay = today.getDay()
   let options = {
     weekday: "long",
     day: "numeric",
