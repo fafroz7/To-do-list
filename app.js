@@ -54,7 +54,7 @@ app.post("/work", function(req, res){
 });
 
 
-
+items =[];
 app.get("/about", function(req, res){
   res.render("about");
 })
